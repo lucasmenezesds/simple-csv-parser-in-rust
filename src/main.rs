@@ -64,8 +64,9 @@ fn run() -> Result<(), Box<dyn Error>> {
     let country_pos = &headers.iter().position(|e| e == "country").unwrap();
     let created_at_pos = &headers.iter().position(|e| e == "created_at").unwrap();
 
+    let headers_to_write = ["id", "email", "name", "location", "created_at"];
 
-    wtr.write_record(["id", "email", "name", "location", "created_at"])?;
+    wtr.write_record(headers_to_write)?;
 
 
     for result in rdr.records() {
