@@ -1,0 +1,15 @@
+/target
+
+# IDE
+.idea
+
+
+# input data
+/data/input/**
+!/data/input/
+!/data/input/.gitkeep
+
+# output data
+/data/output/**
+!/data/output/
+!/data/output/.gitkeep
